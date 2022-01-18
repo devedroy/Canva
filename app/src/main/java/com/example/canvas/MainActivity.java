@@ -11,7 +11,9 @@ public class MainActivity extends AppCompatActivity {
    // P1SimpleDrawCircleRectangleMethods cv2;
 //    Smile cv2;
 //    RunFan cv2;
-   CustomDraw cv2;
+//   CustomDraw cv2;
+   CustomDrawAndReset cv2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         //cv2 = new P1SimpleDrawCircleRectangleMethods(this);
 //        cv2 = new Smile(this);
 //        cv2 = new RunFan(this);
-        cv2 = new CustomDraw(this);
+//        cv2 = new CustomDraw(this);
+        cv2 = new CustomDrawAndReset(this);
 
         cv2.setBackgroundColor(Color.WHITE);
         setContentView(cv2);
