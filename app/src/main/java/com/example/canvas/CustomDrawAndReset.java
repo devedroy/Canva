@@ -31,8 +31,8 @@ public class CustomDrawAndReset extends View {
 
         p = new Paint();
 
-        bitmap_dark = getBitFromVector1(context, draw_dark);
-        bitmap_light = getBitFromVector1(context, draw_light);
+        bitmap_dark = getBitFromVector(context, draw_dark);
+        bitmap_light = getBitFromVector(context, draw_light);
 
         mPath = new Path();
 
@@ -41,7 +41,7 @@ public class CustomDrawAndReset extends View {
         p.setStrokeWidth(20f);
     }
 
-    public static Bitmap getBitFromVector1(Context context, int drawableId) {
+    public static Bitmap getBitFromVector(Context context, int drawableId) {
 
         Drawable drawable = ContextCompat.getDrawable(context, drawableId);
 
@@ -62,6 +62,12 @@ public class CustomDrawAndReset extends View {
        // super.onDraw(canvas);
         canvas.drawColor(Color.YELLOW);
         canvas.drawPath(mPath, p);
+
+        if (b) {
+            canvas.drawBitmap(bitmap_dark, 10, 10, p);
+        } else {
+            canvas.drawBitmap(bitmap_light, 10, 10, p);
+        }
     }
 
     @Override
@@ -71,6 +77,7 @@ public class CustomDrawAndReset extends View {
         switch (event.getAction()) {
 
             case MotionEvent.ACTION_DOWN:
+//                b = true;
                 mPath.moveTo(event.getX(), event.getY());
 
             case MotionEvent.ACTION_MOVE:
