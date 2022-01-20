@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
 //    Smile cv2;
 //    RunFan cv2;
 //   CustomDraw cv2;
-   CustomDrawAndReset cv2;
+//   CustomDrawAndReset cv2;
+   P1FanSurfaceView cv2;
 
 
     @Override
@@ -24,11 +25,11 @@ public class MainActivity extends AppCompatActivity {
 //        cv2 = new Smile(this);
 //        cv2 = new RunFan(this);
 //        cv2 = new CustomDraw(this);
-        cv2 = new CustomDrawAndReset(this);
+//        cv2 = new CustomDrawAndReset(this);
 
-        cv2.setBackgroundColor(Color.WHITE);
+        cv2 = new P1FanSurfaceView(this);
+
+//        cv2.setBackgroundColor(Color.WHITE);
         setContentView(cv2);
     }
-
-
 }
