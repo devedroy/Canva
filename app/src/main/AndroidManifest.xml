@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Canvas">
         <activity
+            android:name=".P2RotateBallCustomView"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
